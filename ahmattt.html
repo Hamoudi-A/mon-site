@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BiblioSmart AI — Système de Gestion</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="logo">
+      <div class="logo-icon">📚</div>
+      <div>
+        <h1>BiblioSmart</h1>
+        <span>Intelligence Artificielle</span>
+      </div>
+    </div>
+    <nav>
+      <a href="index.html" class="nav-item active"><span class="icon">🏠</span> Tableau de bord</a>
+      <a href="livres.html" class="nav-item"><span class="icon">📖</span> Livres</a>
+      <a href="membres.html" class="nav-item"><span class="icon">👥</span> Membres</a>
+      <a href="emprunts.html" class="nav-item"><span class="icon">🔄</span> Emprunts</a>
+      <a href="audit.html" class="nav-item"><span class="icon">🔍</span> Audit</a>
+      <a href="tracabilite.html" class="nav-item"><span class="icon">📋</span> Traçabilité</a>
+      <a href="chatbot.html" class="nav-item"><span class="icon">🤖</span> Chatbot IA</a>
+    </nav>
+    <div class="sidebar-footer">
+      <div class="user-info">
+        <div class="avatar">A</div>
+        <div>
+          <strong>Ahmat</strong>
+          <span>Administrateur</span>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main">
+    <header class="topbar">
+      <div>
+        <h2>Tableau de bord</h2>
+        <p class="date" id="currentDate"></p>
+      </div>
+      <div class="topbar-actions">
+        <div class="search-bar">
+          <input type="text" placeholder="Rechercher un livre, membre..."/>
+          <span>🔎</span>
+        </div>
+        <div class="notif">🔔</div>
+      </div>
+    </header>
+
+    <!-- Stats Cards -->
+    <section class="stats">
+      <div class="card stat-card" style="--accent:#f59e0b">
+        <div class="stat-icon">📚</div>
+        <div class="stat-info">
+          <span class="stat-num" data-target="1248">0</span>
+          <span class="stat-label">Total Livres</span>
+        </div>
+        <div class="stat-trend up">↑ 12%</div>
+      </div>
+      <div class="card stat-card" style="--accent:#10b981">
+        <div class="stat-icon">👥</div>
+        <div class="stat-info">
+          <span class="stat-num" data-target="342">0</span>
+          <span class="stat-label">Membres Actifs</span>
+        </div>
+        <div class="stat-trend up">↑ 8%</div>
+      </div>
+      <div class="card stat-card" style="--accent:#6366f1">
+        <div class="stat-icon">🔄</div>
+        <div class="stat-info">
+          <span class="stat-num" data-target="87">0</span>
+          <span class="stat-label">Emprunts en cours</span>
+        </div>
+        <div class="stat-trend down">↓ 3%</div>
+      </div>
+      <div class="card stat-card" style="--accent:#ef4444">
+        <div class="stat-icon">⚠️</div>
+        <div class="stat-info">
+          <span class="stat-num" data-target="14">0</span>
+          <span class="stat-label">Retards</span>
+        </div>
+        <div class="stat-trend down">↑ 2</div>
+      </div>
+    </section>
+
+    <!-- AI Predictions + Recent -->
+    <section class="grid-2">
+      <!-- AI Prediction -->
+      <div class="card ai-card">
+        <div class="card-header">
+          <h3>🤖 Prédictions IA</h3>
+          <span class="badge">Live</span>
+        </div>
+        <div class="ai-predictions">
+          <div class="prediction-item">
+            <div class="pred-book">📗 Le Petit Prince</div>
+            <div class="pred-bar"><div class="pred-fill" style="width:92%"></div></div>
+            <span>92%</span>
+          </div>
+          <div class="prediction-item">
+            <div class="pred-book">📘 L'Étranger</div>
+            <div class="pred-bar"><div class="pred-fill" style="width:78%"></div></div>
+            <span>78%</span>
+          </div>
+          <div class="prediction-item">
+            <div class="pred-book">📙 Les Misérables</div>
+            <div class="pred-bar"><div class="pred-fill" style="width:65%"></div></div>
+            <span>65%</span>
+          </div>
+          <div class="prediction-item">
+            <div class="pred-book">📕 Harry Potter T1</div>
+            <div class="pred-bar"><div class="pred-fill" style="width:58%"></div></div>
+            <span>58%</span>
+          </div>
+        </div>
+        <p class="ai-note">📊 Livres susceptibles d'être empruntés cette semaine</p>
+      </div>
+
+      <!-- Activités récentes -->
+      <div class="card">
+        <div class="card-header">
+          <h3>📋 Activités Récentes</h3>
+          <a href="tracabilite.html" class="see-all">Voir tout →</a>
+        </div>
+        <div class="activity-list">
+          <div class="activity-item">
+            <div class="act-icon" style="background:#d1fae5">📥</div>
+            <div class="act-info">
+              <strong>Emprunt — Le Petit Prince</strong>
+              <span>Fatima D. · il y a 5 min</span>
+            </div>
+          </div>
+          <div class="activity-item">
+            <div class="act-icon" style="background:#dbeafe">📤</div>
+            <div class="act-info">
+              <strong>Retour — L'Étranger</strong>
+              <span>Moussa K. · il y a 20 min</span>
+            </div>
+          </div>
+          <div class="activity-item">
+            <div class="act-icon" style="background:#fef3c7">➕</div>
+            <div class="act-info">
+              <strong>Nouveau membre — Ibrahim S.</strong>
+              <span>Admin · il y a 1h</span>
+            </div>
+          </div>
+          <div class="activity-item">
+            <div class="act-icon" style="background:#fee2e2">⚠️</div>
+            <div class="act-info">
+              <strong>Retard signalé — Les Misérables</strong>
+              <span>Système IA · il y a 2h</span>
+            </div>
+          </div>
+          <div class="activity-item">
+            <div class="act-icon" style="background:#ede9fe">📚</div>
+            <div class="act-info">
+              <strong>Nouveau livre ajouté</strong>
+              <span>Admin · il y a 3h</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Chart Section -->
+    <section class="grid-2">
+      <div class="card">
+        <div class="card-header">
+          <h3>📈 Emprunts par mois</h3>
+        </div>
+        <canvas id="empruntChart" height="200"></canvas>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <h3>🔍 Audit — Dernières actions</h3>
+        </div>
+        <table class="mini-table">
+          <thead><tr><th>Utilisateur</th><th>Action</th><th>Heure</th><th>Statut</th></tr></thead>
+          <tbody>
+            <tr><td>Admin</td><td>Connexion</td><td>08:00</td><td><span class="badge green">OK</span></td></tr>
+            <tr><td>Fatima</td><td>Emprunt</td><td>08:15</td><td><span class="badge green">OK</span></td></tr>
+            <tr><td>Moussa</td><td>Retour</td><td>09:30</td><td><span class="badge green">OK</span></td></tr>
+            <tr><td>Inconnu</td><td>Tentative</td><td>10:00</td><td><span class="badge red">⚠️ Alerte</span></td></tr>
+            <tr><td>Admin</td><td>Ajout livre</td><td>11:00</td><td><span class="badge green">OK</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <!-- Chatbot floating button -->
+  <a href="chatbot.html" class="chatbot-btn">🤖 IA</a>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
